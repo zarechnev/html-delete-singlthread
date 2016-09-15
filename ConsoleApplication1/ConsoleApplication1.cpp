@@ -42,14 +42,15 @@ int main(int argc, char* argv[])
 		if (ch == '<') b = false;
 	}
 
-	int algorithm_end_time = clock();
-	cout << "Algorithm completed in: " << (algorithm_end_time - start_time) / 1000.0 << " seconds." << endl;
-
 	out_file.open("out_singlethread.txt", ios::trunc);
 
 	out_file << text;
 
 	out_file.close();
 	html_file.close();
+
+	int algorithm_end_time = clock();
+	cout << "Algorithm completed in: " << (algorithm_end_time - start_time) / 1000.0 << " seconds." << endl;
+
 	return 0;
 }
